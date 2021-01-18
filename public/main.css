@@ -10,7 +10,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  border: 1px solid pink;
+  /* border: 1px solid pink; */
 }
 
 html, body{
@@ -115,6 +115,10 @@ input{
 .edit{
   height: 18.91640281677246px;
   width: 4.564593315124512px;
+  transition: var(--transition);
+}
+.edit:hover {
+  transform: scale(1.5);
 }
 .editButtton {
   margin-right: 24px;
@@ -185,11 +189,20 @@ footer {
   margin-left: 24px;
   width: 35px;
   height: 35px;
+  transition: var(--transition);
 }
+.homeButton:hover {
+  transform: scale(1.09);
+}
+
 .createButton{
   margin-right: 24px;
   width: 35px;
   height: 35px;
+  transition: var(--transition);
+}
+.createButton:hover {
+  transform: scale(1.09);
 }
 
 .bottom-nav{
@@ -199,4 +212,8 @@ footer {
 .deleteButton{
   border-color: transparent;
   background-color: transparent;
+  transition: var(--transition);
+}
+.deleteButton:hover {
+  transform: scale(1.4);
 }

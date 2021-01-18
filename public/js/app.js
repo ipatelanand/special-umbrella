@@ -44,9 +44,9 @@ class App extends React.Component {
 		})
 	}
 
-	// displayAnswer = () => {
-	//  document.querySelector(".answer").style.display ="block"
-	// }
+	displayForm = () => {
+	 document.querySelector(".updateForm").style.display ="flex"
+	}
 
 	componentDidMount = () => {
 		axios.get('/home').then((response) => {
@@ -87,7 +87,7 @@ class App extends React.Component {
                     <input type="submit" value="Update Post" />
                   </form>
 									<div className="editButtton">
-										<img className="edit" src="./images/editIcon.svg" />
+										<img onClick={this.displayForm} className="edit" src="./images/editIcon.svg" />
 									</div>
 							</div>
 							<div className="posted-image">
