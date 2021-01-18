@@ -48,6 +48,18 @@ class App extends React.Component {
 	 document.querySelector(".updateForm").style.display ="flex"
 	}
 
+	displayCreateForm = () => {
+	 document.querySelector(".createForm").style.display ="flex"
+	}
+
+	hideCreateForm = () => {
+	 document.querySelector(".createForm").style.display ="none"
+	}
+
+	hideupdateForm = () => {
+	 document.querySelector(".updateForm").style.display ="none"
+	}
+
 	componentDidMount = () => {
 		axios.get('/home').then((response) => {
 			this.setState({
@@ -84,7 +96,7 @@ class App extends React.Component {
                       onChange={this.handleChange}
                     placeholder="image"/>
                     <br />
-                    <input type="submit" value="Update Post" />
+                    <input onClick={this.hideupdateForm} type="submit" value="Update Post" />
                   </form>
 									<div className="editButtton">
 										<img onClick={this.displayForm} className="edit" src="./images/editIcon.svg" />
@@ -114,7 +126,7 @@ class App extends React.Component {
 					)
 				})}
 				<footer>
-					<form onSubmit={this.handleSubmit}>
+					<form className="createForm" onSubmit={this.handleSubmit}>
 						<input type="text" id="caption" onChange={this.handleChange} value={this.state.caption} placeholder="caption"/>
 						<br />
 						<input type="text" id="image" onChange={this.handleChange} value={this.state.image} placeholder="image"/>
@@ -123,7 +135,7 @@ class App extends React.Component {
 						<br />
 						<input type="text" id="username" onChange={this.handleChange} value={this.state.username} placeholder="username"/>
 						<br />
-						<input type="submit" value="Post" />
+						<input onClick={this.hideCreateForm} type="submit" value="Post" />
 
 					</form>
 					<div className="footer-div">
@@ -131,7 +143,7 @@ class App extends React.Component {
 							<img className="bottom-nav" src="./images/home.svg" />
 						</div>
 						<div className="createButton">
-							<img className="bottom-nav" src="./images/create post.svg" />
+							<img onClick={this.displayCreateForm} className="bottom-nav" src="./images/create post.svg" />
 						</div>
 					</div>
 				</footer>
