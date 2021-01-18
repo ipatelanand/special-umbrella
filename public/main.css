@@ -48,7 +48,7 @@ main {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  margin: 0 auto;
+  /* margin: 0 auto; */
 
 }
 header {
@@ -177,6 +177,8 @@ footer {
   background-color: var(--bodyBackground);
   filter: var(--dropShadow);
   margin-top: 24px;
+  position: absolute;
+  top: 816px;
 }
 .footer-div {
   height: 100%;
