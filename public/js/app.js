@@ -74,17 +74,15 @@ class App extends React.Component {
 							<div className="profile-div" >
 								<img className="profile-image" src={post.profileImage} alt="photo" />
 								<h5>{post.username}</h5>
-                  <form id={post._id} onSubmit={this.updatePost}>
-                    <label htmlFor="caption">caption</label>
+                  <form className="updateForm" id={post._id} onSubmit={this.updatePost}>
                     <br />
-                    <input type="text" id="caption" onChange={this.handleChange} />
-                    <label htmlFor="image">Image</label>
+                    <input type="text" id="caption" onChange={this.handleChange}  placeholder="caption"/>
                     <br />
                     <input
                       type="text"
                       id="image"
                       onChange={this.handleChange}
-                    />
+                    placeholder="image"/>
                     <br />
                     <input type="submit" value="Update Post" />
                   </form>
@@ -117,17 +115,13 @@ class App extends React.Component {
 				})}
 				<footer>
 					<form onSubmit={this.handleSubmit}>
-						<label htmlFor="caption">Caption</label>
-						<input type="text" id="caption" onChange={this.handleChange} value={this.state.caption}/>
+						<input type="text" id="caption" onChange={this.handleChange} value={this.state.caption} placeholder="caption"/>
 						<br />
-						<label htmlFor="image">Image</label>
-						<input type="text" id="image" onChange={this.handleChange} value={this.state.image}/>
+						<input type="text" id="image" onChange={this.handleChange} value={this.state.image} placeholder="image"/>
 						<br />
-						<label htmlFor="profileImage">profileImage</label>
-						<input type="text" id="profileImage" onChange={this.handleChange} value={this.state.profileImage}/>
+						<input type="text" id="profileImage" onChange={this.handleChange} value={this.state.profileImage} placeholder="profileImage"/>
 						<br />
-						<label htmlFor="username">Username</label>
-						<input type="text" id="username" onChange={this.handleChange} value={this.state.username}/>
+						<input type="text" id="username" onChange={this.handleChange} value={this.state.username} placeholder="username"/>
 						<br />
 						<input type="submit" value="Post" />
 

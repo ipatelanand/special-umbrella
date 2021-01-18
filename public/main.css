@@ -10,7 +10,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  /* border: 1px solid pink; */
+  border: 1px solid pink;
 }
 
 html, body{
@@ -24,10 +24,20 @@ body{
   /* margin: 1px solid pink; */
 
 }
+
+main {
+  width: 100%;
+  height: 100%;
+  /* border: 2px solid red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
 .main-container {
   width: 100%;
   height: 100%;
-  /* border: 2px solid blue; */
+  border: 2px solid blue;
 }
 /* main {
   height: 100%;
@@ -36,10 +46,9 @@ body{
 .main-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   margin: 0 auto;
-  width: 100%;
 
 }
 header {
@@ -68,10 +77,16 @@ header {
 
 }
 
-
-form {
+.updateForm {
+  display: flex;
+  align-self: center;
+  padding-right: 12px;
   display: none;
 }
+input{
+  width: 100px;
+}
+
 .post-container {
   height: 557px;
   width: 100%;
@@ -155,9 +170,6 @@ h5{
 footer {
   height: 80px;
   width: 100%;
-  /* left: 0px; */
-  /* top: 843px; */
-  /* border-radius: 0px; */
   background-color: var(--bodyBackground);
   filter: var(--dropShadow);
   margin-top: 24px;
@@ -187,13 +199,4 @@ footer {
 .deleteButton{
   border-color: transparent;
   background-color: transparent;
-}
-.deleteButton:hover{
-  .delete{
-    display: contents;
-  }
-}
-.delete {
-  color: var(--bodyTextColor)
-  display: none;
 }
