@@ -44,9 +44,21 @@ class App extends React.Component {
 		})
 	}
 
-	// displayAnswer = () => {
-	//  document.querySelector(".answer").style.display ="block"
-	// }
+	displayForm = () => {
+	 document.querySelector(".updateForm").style.display ="flex"
+	}
+
+	displayCreateForm = () => {
+	 document.querySelector(".createForm").style.display ="flex"
+	}
+
+	hideCreateForm = () => {
+	 document.querySelector(".createForm").style.display ="none"
+	}
+
+	hideupdateForm = () => {
+	 document.querySelector(".updateForm").style.display ="none"
+	}
 
 	componentDidMount = () => {
 		axios.get('/home').then((response) => {
@@ -74,22 +86,20 @@ class App extends React.Component {
 							<div className="profile-div" >
 								<img className="profile-image" src={post.profileImage} alt="photo" />
 								<h5>{post.username}</h5>
-                  <form id={post._id} onSubmit={this.updatePost}>
-                    <label htmlFor="caption">caption</label>
+                  <form className="updateForm" id={post._id} onSubmit={this.updatePost}>
                     <br />
-                    <input type="text" id="caption" onChange={this.handleChange} />
-                    <label htmlFor="image">Image</label>
+                    <input type="text" id="caption" onChange={this.handleChange}  placeholder="caption"/>
                     <br />
                     <input
                       type="text"
                       id="image"
                       onChange={this.handleChange}
-                    />
+                    placeholder="image"/>
                     <br />
-                    <input type="submit" value="Update Post" />
+                    <input onClick={this.hideupdateForm} type="submit" value="Update Post" />
                   </form>
 									<div className="editButtton">
-										<img className="edit" src="./images/editIcon.svg" />
+										<img onClick={this.displayForm} className="edit" src="./images/editIcon.svg" />
 									</div>
 							</div>
 							<div className="posted-image">
@@ -116,20 +126,16 @@ class App extends React.Component {
 					)
 				})}
 				<footer>
-					<form onSubmit={this.handleSubmit}>
-						<label htmlFor="caption">Caption</label>
-						<input type="text" id="caption" onChange={this.handleChange} value={this.state.caption}/>
+					<form className="createForm" onSubmit={this.handleSubmit}>
+						<input type="text" id="caption" onChange={this.handleChange} value={this.state.caption} placeholder="caption"/>
 						<br />
-						<label htmlFor="image">Image</label>
-						<input type="text" id="image" onChange={this.handleChange} value={this.state.image}/>
+						<input type="text" id="image" onChange={this.handleChange} value={this.state.image} placeholder="image"/>
 						<br />
-						<label htmlFor="profileImage">profileImage</label>
-						<input type="text" id="profileImage" onChange={this.handleChange} value={this.state.profileImage}/>
+						<input type="text" id="profileImage" onChange={this.handleChange} value={this.state.profileImage} placeholder="profileImage"/>
 						<br />
-						<label htmlFor="username">Username</label>
-						<input type="text" id="username" onChange={this.handleChange} value={this.state.username}/>
+						<input type="text" id="username" onChange={this.handleChange} value={this.state.username} placeholder="username"/>
 						<br />
-						<input type="submit" value="Post" />
+						<input onClick={this.hideCreateForm} type="submit" value="Post" />
 
 					</form>
 					<div className="footer-div">
@@ -137,7 +143,7 @@ class App extends React.Component {
 							<img className="bottom-nav" src="./images/home.svg" />
 						</div>
 						<div className="createButton">
-							<img className="bottom-nav" src="./images/create post.svg" />
+							<img onClick={this.displayCreateForm} className="bottom-nav" src="./images/create post.svg" />
 						</div>
 					</div>
 				</footer>
