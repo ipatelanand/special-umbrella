@@ -76,31 +76,54 @@ class App extends React.Component {
 					<div className="logo-div">
 						<img className="logo" src="./images/logo.svg" alt="Besties" />
 					</div>
+					<div className="logo-desktop-div">
+						<img className="logo-desktop" src="./images/logo-desktop.svg" alt="Besties" />
+					</div>
 					<div className="nav-div">
 						<img className="inbox" src="./images/inboxIcon.svg" alt="share"/>
+
+					</div>
+					<div className="top-nav">
+						<div className="create-Button-desktop">
+							<img onClick={this.displayCreateForm} className="create-desktop" src="./images/post-desktop.svg" />
+						</div>
+						<div className="create-Button-desktop">
+							<img onClick={this.displayCreateForm} className="home-desktop" src="./images/home-desktop.svg" />
+						</div>
 					</div>
 				</header>
 				{this.state.posts.map((post) => {
 					return (
 						<div key={post._id} className="post-container">
 							<div className="profile-div" >
-								<img className="profile-image" src={post.profileImage} alt="photo" />
-								<h5>{post.username}</h5>
-                  <form className="updateForm" id={post._id} onSubmit={this.updatePost}>
-                    <br />
-                    <input type="text" id="caption" onChange={this.handleChange}  placeholder="caption"/>
-                    <br />
-                    <input
-                      type="text"
-                      id="image"
-                      onChange={this.handleChange}
-                    placeholder="image"/>
-                    <br />
-                    <input onClick={this.hideupdateForm} type="submit" value="Update Post" />
-                  </form>
-									<div className="editButtton">
-										<img onClick={this.displayForm} className="edit" src="./images/editIcon.svg" />
-									</div>
+								<img className="profile-image profile" src={post.profileImage}
+								 alt="photo" />
+								<h5 className="profile">{post.username}</h5>
+
+								<div className="profile-container">
+									<img className="profile-image" src={post.profileImage}
+									 alt="photo" />
+									<p className="userName">{post.username}</p>
+								</div>
+								<p className="caption-desktop"> {post.caption}</p>
+                <form className="updateForm" id={post._id} onSubmit={this.updatePost}>
+                  <br />
+                  <input type="text" id="caption" onChange={this.handleChange}  placeholder="caption"/>
+                  <br />
+                  <input
+                    type="text"
+                    id="image"
+                    onChange={this.handleChange}
+                  placeholder="image"/>
+                  <br />
+                  <input onClick={this.hideupdateForm} type="submit" value="Update Post" />
+                </form>
+								<div className="editButtton">
+									<img onClick={this.displayForm} className="edit" src="./images/editIcon.svg" />
+								</div>
+								<div className="editButtton-desktop">
+									<img onClick={this.displayForm} className="edit" src="./images/edit-desktop.svg" />
+								</div>
 							</div>
 							<div className="posted-image">
 									<img className="image" src={post.image} alt={post.username} />
@@ -117,8 +140,22 @@ class App extends React.Component {
 										<img src="./images/sendIcon.svg" />
 									</div>
 								</div>
-								<button onMouseEnter={this.mouseOver} className="deleteButton" value={post._id} onClick={this.deletePost}>
-								<img src="./images/delete.svg" />
+								<div className="left-side-desktop">
+									<div className="likeButton">
+										<img src="./images/like-desktop.svg" />
+									</div>
+									<div className="commentButton">
+										<img src="./images/comment desktop.svg" />
+									</div>
+									<div className="sendButton">
+										<img src="./images/send-desktop.svg" />
+									</div>
+									<button  onMouseEnter={this.mouseOver} className="deleteButton-desktop" value={post._id} onClick={this.deletePost}>
+									<img src="./images/delete-desktop.svg" />
+									</button>
+								</div>
+								<button onMouseEnter={this.mouseOver} className="deleteButton deleteButton-desktop" value={post._id} onClick={this.deletePost}>
+								<img  src="./images/delete.svg" />
 								</button>
 							</div>
 							<p className="caption">{post.username} {post.caption}</p>

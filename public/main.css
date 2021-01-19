@@ -22,8 +22,25 @@ html, body{
 body{
   background: var(--bodyBackground);
   color: var(--bodyTextColor);
-  /* margin: 1px solid pink; */
+  /* margin: 5px solid pink; */
+  height: 100%;
 
+}
+.left-side-desktop {
+  display: none;
+}
+
+.create-Button-desktop {
+  display: none;
+}
+.top-nav {
+  display: none;
+}
+.caption-desktop {
+  display: none;
+}
+.profile-container {
+  display: none;
 }
 
 main {
@@ -34,16 +51,14 @@ main {
   justify-content: center;
   align-items: center;
   margin: 0 auto;
+  /* border: 2px solid yellow; */
 }
 .main-container {
   width: 100%;
   height: 100%;
   /* border: 2px solid blue; */
 }
-/* main {
-  height: 100%;
-  border: 2px solid yellow;
-} */
+
 .main-container {
   display: flex;
   flex-direction: column;
@@ -65,17 +80,20 @@ header {
   align-items: center;
   justify-content: flex-start;
   padding-left: 24px;
+  fill : red;
 }
 .logo {
   width: 104px;
   height: 34px;
+  fill: pink;
 }
 .inbox {
   margin-right: 24px;
   height: 28.4px;
   width: 28.4px;
-
-
+}
+.logo-desktop-div {
+  display: none;
 }
 
 
@@ -103,6 +121,8 @@ header {
   border-radius: 100%;
   margin-left: 24px;
   margin-right: 10px;
+  object-fit: cover;
+  border: 4px dashed rgba(233,69,96,0.6);
 }
 .edit{
   height: 18.91640281677246px;
@@ -168,7 +188,7 @@ footer {
   width: 100%;
   background-color: var(--bodyBackground);
   filter: var(--dropShadow);
-  margin-top: 24px;
+  margin-top: 12px;
   position: absolute;
   top: 816px;
   /* border: 1px solid red; */
@@ -235,4 +255,175 @@ input{
   align-self: center;
   padding-right: 12px;
   display: none;
+}
+
+/* media query */
+
+@media (min-width:735px) {
+  *{
+    /* border: 1px solid pink; */
+  }
+  main{
+    height: 100%;
+    width: 100%;
+    /* border: 2px solid yellow; */
+  }
+  .main-container {
+    /* border: 4px solid green; */
+    height: 100%;
+    /* display: flex; */
+  }
+  header{
+    height: 187px;
+    margin-bottom: 24px
+    border: 4px solid green;
+    /* display: none; */
+  }
+  .logo-div {
+    display: none;
+  }
+  .nav-div {
+    display: none;
+  }
+  .logo-desktop-div {
+    display: flex;
+    margin-left : 24px;
+  }
+  .createButton {
+    display: none;
+
+  }
+  .create-Button-desktop {
+    display: flex;
+  }
+
+  .top-nav {
+    display: flex;
+    margin-right: 24px;
+    align-items: center;
+    justify-content: space-between;
+    width: 160px;
+  }
+  footer{
+    display: none;
+  }
+  .post-container {
+    display: flex;
+    flex-direction: row;
+    width: 1364px;
+    height: 745px;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+  .profile-div {
+    display: flex;
+    flex-direction: column;
+    height: 666px;
+    width: 220px;
+    /* justify-content: space-around; */
+    align-items: center;
+    justify-content: space-around;
+    margin-top: -48px;
+    margin-right: 48px;
+
+  }
+  .caption {
+    display: none;
+  }
+  .caption-desktop {
+    display: block;
+    /* margin-top: -300px; */
+  }
+  .profile-image {
+    height: 150px;
+    width: 150px;
+    /* align-self: center;
+    margin-top: 21px; */
+
+  }
+  .image {
+    height: 100%;
+    width: 100%;
+    border-radius: 24px;
+  }
+  .posted-image {
+    height: 718px;
+    width: 870px;
+    align-self: center;
+  }
+  .profile-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 190px;
+    margin-top: -100px;
+  }
+  .profile {
+    display: none;
+  }
+  .userName {
+    align-self: center;
+
+  }
+
+  .caption-desktop {
+    margin-top: -160px;
+  }
+  .editButtton {
+    width: 40px;
+    height: 40px;
+  }
+  .edit{
+    width: 100%;
+    height: 100%;
+  }
+  .like-bar {
+    display: flex;
+    flex-direction: column;
+    width: 202px;
+    height: 666px;
+    margin-top: -48px;
+    /* margin-left: 60px; */
+  }
+
+  .left-side-icons {
+    display: none;
+  }
+  .left-side-desktop {
+    display: flex;
+    flex-direction: column;
+    height: 380px;
+    justify-content: flex-start;
+    align-items: center;
+    /* margin: 0 auto; */
+    margin-top: 24px;
+  }
+  .deleteButton-desktop {
+    display: block;
+  }
+  .deleteButton {
+    display: none
+  }
+  .likeButton, .sendButton, .commentButton, .deleteButton-desktop {
+    margin-bottom: 55px;
+    background-color: transparent;
+    width: 48px;
+    height: 48px;
+    border-color: transparent;
+  }
+
+  .commentButton {
+    margin-right: 24px;
+  }
+
+  .editButtton-desktop {
+    display: block;
+    width: 12px;
+  }
+
+  .editButtton {
+    display: none;
+  }
+
+/* dont cross this line */
 }
