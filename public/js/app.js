@@ -76,8 +76,20 @@ class App extends React.Component {
 					<div className="logo-div">
 						<img className="logo" src="./images/logo.svg" alt="Besties" />
 					</div>
+					<div className="logo-desktop-div">
+						<img className="logo-desktop" src="./images/logo-desktop.svg" alt="Besties" />
+					</div>
 					<div className="nav-div">
 						<img className="inbox" src="./images/inboxIcon.svg" alt="share"/>
+
+					</div>
+					<div className="top-nav">
+						<div className="create-Button-desktop">
+							<img onClick={this.displayCreateForm} className="create-desktop" src="./images/post-desktop.svg" />
+						</div>
+						<div className="create-Button-desktop">
+							<img onClick={this.displayCreateForm} className="home-desktop" src="./images/home-desktop.svg" />
+						</div>
 					</div>
 				</header>
 				{this.state.posts.map((post) => {
