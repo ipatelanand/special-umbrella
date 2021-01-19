@@ -96,24 +96,31 @@ class App extends React.Component {
 					return (
 						<div key={post._id} className="post-container">
 							<div className="profile-div" >
-								<img className="profile-image" src={post.profileImage} alt="photo" />
-								<h5>{post.username}</h5>
+								<img className="profile-image profile" src={post.profileImage}
+								 alt="photo" />
+								<h5 className="profile">{post.username}</h5>
+
+								<div className="profile-container">
+									<img className="profile-image" src={post.profileImage}
+									 alt="photo" />
+									<p className="userName">{post.username}</p>
+								</div>
 								<p className="caption-desktop"> {post.caption}</p>
-                  <form className="updateForm" id={post._id} onSubmit={this.updatePost}>
-                    <br />
-                    <input type="text" id="caption" onChange={this.handleChange}  placeholder="caption"/>
-                    <br />
-                    <input
-                      type="text"
-                      id="image"
-                      onChange={this.handleChange}
-                    placeholder="image"/>
-                    <br />
-                    <input onClick={this.hideupdateForm} type="submit" value="Update Post" />
-                  </form>
-									<div className="editButtton">
-										<img onClick={this.displayForm} className="edit" src="./images/editIcon.svg" />
-									</div>
+                <form className="updateForm" id={post._id} onSubmit={this.updatePost}>
+                  <br />
+                  <input type="text" id="caption" onChange={this.handleChange}  placeholder="caption"/>
+                  <br />
+                  <input
+                    type="text"
+                    id="image"
+                    onChange={this.handleChange}
+                  placeholder="image"/>
+                  <br />
+                  <input onClick={this.hideupdateForm} type="submit" value="Update Post" />
+                </form>
+								<div className="editButtton">
+									<img onClick={this.displayForm} className="edit" src="./images/editIcon.svg" />
+								</div>
 							</div>
 							<div className="posted-image">
 									<img className="image" src={post.image} alt={post.username} />

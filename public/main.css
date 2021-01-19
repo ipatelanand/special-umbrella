@@ -22,7 +22,8 @@ html, body{
 body{
   background: var(--bodyBackground);
   color: var(--bodyTextColor);
-  /* margin: 1px solid pink; */
+  /* margin: 5px solid pink; */
+  height: 100%;
 
 }
 
@@ -35,6 +36,9 @@ body{
 .caption-desktop {
   display: none;
 }
+.profile-container {
+  display: none;
+}
 
 main {
   width: 100%;
@@ -44,6 +48,7 @@ main {
   justify-content: center;
   align-items: center;
   margin: 0 auto;
+  /* border: 2px solid yellow; */
 }
 .main-container {
   width: 100%;
@@ -252,12 +257,23 @@ input{
 
 @media (min-width:735px) {
   *{
-    border: 1px solid pink;
+    /* border: 1px solid pink; */
   }
-
+  main{
+    height: 100%;
+    width: 100%;
+    /* border: 2px solid yellow; */
+  }
+  .main-container {
+    /* border: 4px solid green; */
+    height: 100%;
+    /* display: flex; */
+  }
   header{
     height: 187px;
-    margin-bottom: 24px;
+    margin-bottom: 24px
+    border: 4px solid green;
+    /* display: none; */
   }
   .logo-div {
     display: none;
@@ -292,26 +308,32 @@ input{
     flex-direction: row;
     height: 745px;
     align-items: center;
+    margin-bottom: 24px;
   }
   .profile-div {
     display: flex;
     flex-direction: column;
-    height: 100%;
+    height: 666px;
     width: 260px;
     /* justify-content: space-around; */
-    align-items: flex-start;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: -48px;
+
   }
   .caption {
     display: none;
   }
   .caption-desktop {
     display: block;
+    /* margin-top: -300px; */
   }
   .profile-image {
     height: 150px;
     width: 150px;
-    align-self: center;
-    margin-top: 21px;
+    /* align-self: center;
+    margin-top: 21px; */
+
   }
   .image {
     height: 100%;
@@ -321,7 +343,34 @@ input{
   .posted-image {
     height: 100%;
     width: 870px;
+
   }
+  .profile-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 190px;
+    margin-top: -120px;
+  }
+  .profile {
+    display: none;
+  }
+  .userName {
+    align-self: center;
+
+  }
+
+  .caption-desktop {
+    margin-top: -160px;
+  }
+  .editButtton {
+  }
+  .edit{
+  }
+  .like-bar {
+  }
+
+
 
 /* dont cross this line */
 }
