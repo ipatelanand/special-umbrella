@@ -302,7 +302,7 @@ input{
     margin-right: 24px;
     align-items: center;
     justify-content: space-between;
-    width: 180px;
+    width: 160px;
   }
   footer{
     display: none;
@@ -416,7 +416,14 @@ input{
     margin-right: 24px;
   }
 
+  .editButtton-desktop {
+    display: block;
+    width: 12px;
+  }
 
+  .editButtton {
+    display: none;
+  }
 
 /* dont cross this line */
 }

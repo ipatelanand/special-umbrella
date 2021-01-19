@@ -121,6 +121,9 @@ class App extends React.Component {
 								<div className="editButtton">
 									<img onClick={this.displayForm} className="edit" src="./images/editIcon.svg" />
 								</div>
+								<div className="editButtton-desktop">
+									<img onClick={this.displayForm} className="edit" src="./images/edit-desktop.svg" />
+								</div>
 							</div>
 							<div className="posted-image">
 									<img className="image" src={post.image} alt={post.username} />
