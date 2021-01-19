@@ -122,7 +122,7 @@ class App extends React.Component {
 									<p className="userName">{post.username}</p>
 								</div>
 								<p className="caption-desktop"> {post.caption}</p>
-                <form className="updateForm updateForm-desktop" id={post._id} onSubmit={this.updatePost}>
+                <form className="updateForm" id={post._id} onSubmit={this.updatePost}>
                   <br />
                   <input type="text" id="caption" onChange={this.handleChange}  placeholder="caption"/>
                   <br />
