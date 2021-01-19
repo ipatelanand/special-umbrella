@@ -32,6 +32,9 @@ body{
 .top-nav {
   display: none;
 }
+.caption-desktop {
+  display: none;
+}
 
 main {
   width: 100%;
@@ -110,6 +113,7 @@ header {
   border-radius: 100%;
   margin-left: 24px;
   margin-right: 10px;
+  object-fit: cover;
 }
 .edit{
   height: 18.91640281677246px;
@@ -248,11 +252,12 @@ input{
 
 @media (min-width:735px) {
   *{
-    /* border: 1px solid pink; */
+    border: 1px solid pink;
   }
 
   header{
     height: 187px;
+    margin-bottom: 24px;
   }
   .logo-div {
     display: none;
@@ -281,6 +286,41 @@ input{
   }
   footer{
     display: none;
+  }
+  .post-container {
+    display: flex;
+    flex-direction: row;
+    height: 745px;
+    align-items: center;
+  }
+  .profile-div {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 260px;
+    /* justify-content: space-around; */
+    align-items: flex-start;
+  }
+  .caption {
+    display: none;
+  }
+  .caption-desktop {
+    display: block;
+  }
+  .profile-image {
+    height: 150px;
+    width: 150px;
+    align-self: center;
+    margin-top: 21px;
+  }
+  .image {
+    height: 100%;
+    width: 870px;
+    border-radius: 24px;
+  }
+  .posted-image {
+    height: 100%;
+    width: 870px;
   }
 
 /* dont cross this line */

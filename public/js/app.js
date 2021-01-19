@@ -98,6 +98,7 @@ class App extends React.Component {
 							<div className="profile-div" >
 								<img className="profile-image" src={post.profileImage} alt="photo" />
 								<h5>{post.username}</h5>
+								<p className="caption-desktop"> {post.caption}</p>
                   <form className="updateForm" id={post._id} onSubmit={this.updatePost}>
                     <br />
                     <input type="text" id="caption" onChange={this.handleChange}  placeholder="caption"/>
