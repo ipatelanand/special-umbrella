@@ -26,6 +26,9 @@ body{
   height: 100%;
 
 }
+.left-side-desktop {
+  display: none;
+}
 
 .create-Button-desktop {
   display: none;
@@ -119,6 +122,7 @@ header {
   margin-left: 24px;
   margin-right: 10px;
   object-fit: cover;
+  border: 4px dashed rgba(233,69,96,0.6);
 }
 .edit{
   height: 18.91640281677246px;
@@ -298,7 +302,7 @@ input{
     margin-right: 24px;
     align-items: center;
     justify-content: space-between;
-    width: 140px;
+    width: 180px;
   }
   footer{
     display: none;
@@ -306,6 +310,7 @@ input{
   .post-container {
     display: flex;
     flex-direction: row;
+    width: 1364px;
     height: 745px;
     align-items: center;
     margin-bottom: 24px;
@@ -314,11 +319,12 @@ input{
     display: flex;
     flex-direction: column;
     height: 666px;
-    width: 260px;
+    width: 220px;
     /* justify-content: space-around; */
     align-items: center;
     justify-content: space-around;
     margin-top: -48px;
+    margin-right: 48px;
 
   }
   .caption {
@@ -337,20 +343,20 @@ input{
   }
   .image {
     height: 100%;
-    width: 870px;
+    width: 100%;
     border-radius: 24px;
   }
   .posted-image {
-    height: 100%;
+    height: 718px;
     width: 870px;
-
+    align-self: center;
   }
   .profile-container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 190px;
-    margin-top: -120px;
+    margin-top: -100px;
   }
   .profile {
     display: none;
@@ -364,10 +370,50 @@ input{
     margin-top: -160px;
   }
   .editButtton {
+    width: 40px;
+    height: 40px;
   }
   .edit{
+    width: 100%;
+    height: 100%;
   }
   .like-bar {
+    display: flex;
+    flex-direction: column;
+    width: 202px;
+    height: 666px;
+    margin-top: -48px;
+    /* margin-left: 60px; */
+  }
+
+  .left-side-icons {
+    display: none;
+  }
+  .left-side-desktop {
+    display: flex;
+    flex-direction: column;
+    height: 380px;
+    justify-content: flex-start;
+    align-items: center;
+    /* margin: 0 auto; */
+    margin-top: 24px;
+  }
+  .deleteButton-desktop {
+    display: block;
+  }
+  .deleteButton {
+    display: none
+  }
+  .likeButton, .sendButton, .commentButton, .deleteButton-desktop {
+    margin-bottom: 55px;
+    background-color: transparent;
+    width: 48px;
+    height: 48px;
+    border-color: transparent;
+  }
+
+  .commentButton {
+    margin-right: 24px;
   }
 
 

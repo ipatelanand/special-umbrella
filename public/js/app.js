@@ -137,8 +137,22 @@ class App extends React.Component {
 										<img src="./images/sendIcon.svg" />
 									</div>
 								</div>
-								<button onMouseEnter={this.mouseOver} className="deleteButton" value={post._id} onClick={this.deletePost}>
-								<img src="./images/delete.svg" />
+								<div className="left-side-desktop">
+									<div className="likeButton">
+										<img src="./images/like-desktop.svg" />
+									</div>
+									<div className="commentButton">
+										<img src="./images/comment desktop.svg" />
+									</div>
+									<div className="sendButton">
+										<img src="./images/send-desktop.svg" />
+									</div>
+									<button  onMouseEnter={this.mouseOver} className="deleteButton-desktop" value={post._id} onClick={this.deletePost}>
+									<img src="./images/delete-desktop.svg" />
+									</button>
+								</div>
+								<button onMouseEnter={this.mouseOver} className="deleteButton deleteButton-desktop" value={post._id} onClick={this.deletePost}>
+								<img  src="./images/delete.svg" />
 								</button>
 							</div>
 							<p className="caption">{post.username} {post.caption}</p>
