@@ -50,10 +50,13 @@ class App extends React.Component {
 
 	displayCreateForm = () => {
 	 document.querySelector(".createForm").style.display ="flex"
-	}
+	 document.querySelector(".createForm-desktop").style.display ="flex"
 
+
+	}
 	hideCreateForm = () => {
 	 document.querySelector(".createForm").style.display ="none"
+	 document.querySelector(".createForm-desktop").style.display ="none"
 	}
 
 	hideupdateForm = () => {
@@ -83,7 +86,20 @@ class App extends React.Component {
 						<img className="inbox" src="./images/inboxIcon.svg" alt="share"/>
 
 					</div>
+					<form className="createForm-desktop" onSubmit={this.handleSubmit}>
+						<input type="text" id="caption" onChange={this.handleChange} value={this.state.caption} placeholder="caption"/>
+						<br />
+						<input type="text" id="image" onChange={this.handleChange} value={this.state.image} placeholder="image"/>
+						<br />
+						<input type="text" id="profileImage" onChange={this.handleChange} value={this.state.profileImage} placeholder="profileImage"/>
+						<br />
+						<input type="text" id="username" onChange={this.handleChange} value={this.state.username} placeholder="username"/>
+						<br />
+						<input onClick={this.hideCreateForm} type="submit" value="Post" />
+
+					</form>
 					<div className="top-nav">
+
 						<div className="create-Button-desktop">
 							<img onClick={this.displayCreateForm} className="create-desktop" src="./images/post-desktop.svg" />
 						</div>
